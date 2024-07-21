@@ -24,9 +24,7 @@ def get_players_data():
     player1 = Player(player1_name, game_mode)
     player2 = Player(player2_name, game_mode)
 
-    players = [player1, player2]
-
-    return players
+    return player1, player2
     
 
 def adjust_life():
@@ -42,8 +40,11 @@ def main():
     print("2. Define each player names.")
     print("3. Roll a dice to find out who starts.")
 
-    players = get_players_data()
-    print(players.value)
+    player1, player2 = get_players_data()
+
+    print("\nPlayer Data:")
+    print(player1.life_points)
+    print(player2.life_points)
 
 
 main()
