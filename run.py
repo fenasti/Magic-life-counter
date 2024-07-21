@@ -3,7 +3,18 @@ class Player:
         self.name = name
         self.life_points = life_points
 
+def adjust_life():
+    pass
+
+def roll_dice():
+    pass
+
 def main():
-    print("Magic!")
+
+    run_game = True
+
+    while run_game:
+            print("Welcome to the Magic: The Gathering life points counter!")
+
 
 main()
