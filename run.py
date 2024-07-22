@@ -18,16 +18,24 @@ def get_players_data():
 
     game_mode = get_initial_life_points()
 
-    player1_name = input("Enter the name of Player 1: ")
-    player2_name = input("Enter the name of Player 2: ")
+    player1_name = input("Enter the name of Player 1: \n")
+    player2_name = input("Enter the name of Player 2: \n")
     
     player1 = Player(player1_name, game_mode)
     player2 = Player(player2_name, game_mode)
 
     return player1, player2
     
-def adjust_life():
-    get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit): ")
+def adjust_life(p1, p2):
+    while True:
+        get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit): \n")
+        if get_new_score.lower() == "exit":
+            break
+        else:
+            name, new_score = get_new_score.split()
+            print(new_score)
+
+
 
 def roll_dice():
     pass
@@ -46,7 +54,7 @@ def main():
     print(player2.name, player2.life_points)
     p1score = player1.life_points
     p2score = player2.life_points
-    new_score = adjust_life()
+    new_score = adjust_life(p1score, p2score)
 
 
 main()
