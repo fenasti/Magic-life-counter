@@ -89,8 +89,8 @@ def adjust_life(player1, player2):
             continue
 
         print("\nUpdated Life Points:")
-        print(f"{player1.name} is {player1.life_points}lp")
-        print(f"{player2.name} is {player2.life_points}lp")
+        print(f"{player1.name} is {player1.life_points} Lp")
+        print(f"{player2.name} is {player2.life_points} Lp")
 
 def roll_dice(name1, name2):
     input("Press Enter to roll the dice and determine who starts...\n")
@@ -108,7 +108,7 @@ def main():
     print("Welcome to the Magic: The Gathering life points counter!")
     print_ascii_art()
     print("Instructions:")
-    print("1. Choose game mode, Standard (20lp) or Commander (40lp).")
+    print("1. Choose game mode, Standard (20 Lp) or Commander (40 Lp).")
     print("2. Define each player names.")
     print("3. Roll a dice to find out who starts.")
     print()
@@ -116,8 +116,8 @@ def main():
     print()
     print("**************************************")
     print("\nPlayers Data:")
-    print(f"{player1.name} starts with {player1.life_points}lp")
-    print(f"{player2.name} starts with {player2.life_points}lp")
+    print(f"{player1.name} starts with {player1.life_points} Lp")
+    print(f"{player2.name} starts with {player2.life_points} Lp")
     print()
     print("**************************************")
     print()
