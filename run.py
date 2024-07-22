@@ -1,3 +1,5 @@
+import random
+
 class Player:
     """Define the name and the life points amount of each player"""
     def __init__(self, name, life_points):
@@ -12,17 +14,20 @@ def get_players_data():
 
     def get_initial_life_points():
         while True:
-            game_mode = input("Enter game mode (Standard or Commander): ").lower()
+            game_mode = input("Enter game mode (Standard or Commander):\n").lower()
+            print()
             if game_mode == "standard":
                 return 20
             elif game_mode == "commander":
                 return 40
             else:
                 print("Invalid mode, choose 'Standard' or 'Commander'.")
+                
 
     game_mode = get_initial_life_points()
 
     player1_name = input("Enter the name of Player 1: \n")
+    print()
     player2_name = input("Enter the name of Player 2: \n")
     
     player1 = Player(player1_name, game_mode)
@@ -61,12 +66,17 @@ def adjust_life(player1, player2):
         print(player1.name, player1.life_points)
         print(player2.name, player2.life_points)
 
+def roll_dice(name1, name2):
+    input("Press Enter to roll the dice and determine who starts...\n")
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    print(f"Dice rolls... {name1} rolled {dice1}, {name2} rolled {dice2}")
+    while dice1 == dice2:
+        print("It's a tie! Rolling the dice again...")
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+        print(f"New rolls... {name1} rolled {dice1}, {name2} rolled {dice2}")
             
-
-
-
-def roll_dice():
-    pass
 
 def main():
     print("Welcome to the Magic: The Gathering life points counter!")
@@ -74,12 +84,16 @@ def main():
     print("1. Choose game mode, Standard or Commander.")
     print("2. Define each player names.")
     print("3. Roll a dice to find out who starts.")
-
+    print()
     player1, player2 = get_players_data()
+    print()
     print("*********************************")
     print("\nPlayer Data:")
     print(player1.name, player1.life_points)
     print(player2.name, player2.life_points)
+    print()
+    roll_dice(player1.name, player2.name)
+    
 
    # p1score = player1.life_points
    # p2score = player2.life_points
