@@ -52,9 +52,9 @@ def get_players_data():
 
     game_mode = get_initial_life_points()
 
-    player1_name = input("Enter the name of Player 1: \n")
+    player1_name = input("Enter the name of Player 1:\n")
     print()
-    player2_name = input("Enter the name of Player 2: \n")
+    player2_name = input("Enter the name of Player 2:\n")
     
     player1 = Player(player1_name, game_mode)
     player2 = Player(player2_name, game_mode)
@@ -63,7 +63,7 @@ def get_players_data():
     
 def adjust_life(player1, player2):
     while True:
-        get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit): \n")
+        get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit):\n")
         if get_new_score.lower() == "exit":
             break
 
