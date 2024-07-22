@@ -89,8 +89,8 @@ def adjust_life(player1, player2):
             continue
 
         print("\nUpdated Life Points:")
-        print(player1.name, player1.life_points)
-        print(player2.name, player2.life_points)
+        print(f"{player1.name} is {player1.life_points}lp")
+        print(f"{player2.name} is {player2.life_points}lp")
 
 def roll_dice(name1, name2):
     input("Press Enter to roll the dice and determine who starts...\n")
@@ -116,20 +116,12 @@ def main():
     print()
     print("**************************************")
     print("\nPlayers Data:")
-    print(player1.name, player1.life_points)
-    print(player2.name, player2.life_points)
+    print(f"{player1.name} starts with {player1.life_points}lp")
+    print(f"{player2.name} starts with {player2.life_points}lp")
+    print()
+    print("**************************************")
     print()
     roll_dice(player1.name, player2.name)
-    
-
-   # p1score = player1.life_points
-   # p2score = player2.life_points
-   # p1name = player1.name
-   # p2name = player2.name
-
-   # player_one = [p1name, p1score]
-   # player_two = [p2name, p2score]
     adjust_life(player1, player2)
-
 
 main()
