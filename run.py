@@ -4,6 +4,10 @@ class Player:
         self.name = name
         self.life_points = life_points
 
+    def adjust_life(self, amount):
+        self.life_points += amount
+        
+
 def get_players_data():
 
     def get_initial_life_points():
@@ -31,9 +35,21 @@ def adjust_life(p1, p2):
         get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit): \n")
         if get_new_score.lower() == "exit":
             break
-        else:
+
+        try:
             name, new_score = get_new_score.split()
-            print(new_score)
+            new_score = int(new_score)
+        except ValueError:
+            print("Invalid input. Please enter the action in the correct format.")
+            continue
+
+        for player in players:
+            if player.name.lower() == name.lower():
+                player.adjust_life(change)
+                break
+        else:
+            print(f"No player found with the name {name}.")
+            
 
 
 
@@ -52,9 +68,17 @@ def main():
     print("\nPlayer Data:")
     print(player1.name, player1.life_points)
     print(player2.name, player2.life_points)
+
     p1score = player1.life_points
     p2score = player2.life_points
-    new_score = adjust_life(p1score, p2score)
+    p1name = player1.name
+    p2name = player2.name
+
+    player_one = [p1name, p1score]
+    player_two = [p2name, p2score]
+
+    print(player_one, player_two)
+    new_score = adjust_life(player_one, player_two)
 
 
 main()
