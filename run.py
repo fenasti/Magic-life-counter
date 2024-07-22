@@ -9,6 +9,32 @@ class Player:
     def adjust_life(self, amount):
         self.life_points += amount
         
+def print_ascii_art():
+    art = """
+         .AMMMMMMMMMMA.          
+       .AV. :::.:.:.::MA.        
+      A' :..        : .:`A       
+     A'..              . `A.     
+    A' :.    :::::::::  : :`A    
+    M  .    :::.:.:.:::  . .M    
+    M  :   ::.:.....::.:   .M    
+    V : :.::.:........:.:  :V    
+   A  A:    ..:...:...:.   A A   
+  .V  MA:.....:M.::.::. .:AM.M   
+ A'  .VMMMMMMMMM:.:AMMMMMMMV: A  
+:M .  .`VMMMMMMV.:A `VMMMMV .:M: 
+ V.:.  ..`VMMMV.:AM..`VMV' .: V  
+  V.  .:. .....:AMMA. . .:. .V   
+   VMM...: ...:.MMMM.: .: MMV    
+       `VM: . ..M.:M..:::M'      
+         `M::. .:.... .::M       
+          M:.  :. .... ..M       
+ VK       V:  M:. M. :M .V       
+          `V.:M.. M. :M.V'
+    """
+    print(art)
+
+
 
 def get_players_data():
 
@@ -80,15 +106,16 @@ def roll_dice(name1, name2):
 
 def main():
     print("Welcome to the Magic: The Gathering life points counter!")
+    print_ascii_art()
     print("Instructions:")
-    print("1. Choose game mode, Standard or Commander.")
+    print("1. Choose game mode, Standard (20lp) or Commander (40lp).")
     print("2. Define each player names.")
     print("3. Roll a dice to find out who starts.")
     print()
     player1, player2 = get_players_data()
     print()
-    print("*********************************")
-    print("\nPlayer Data:")
+    print("**************************************")
+    print("\nPlayers Data:")
     print(player1.name, player1.life_points)
     print(player2.name, player2.life_points)
     print()
