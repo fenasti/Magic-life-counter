@@ -26,9 +26,8 @@ def get_players_data():
 
     return player1, player2
     
-
 def adjust_life():
-    pass
+    get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit): ")
 
 def roll_dice():
     pass
@@ -36,15 +35,18 @@ def roll_dice():
 def main():
     print("Welcome to the Magic: The Gathering life points counter!")
     print("Instructions:")
-    print("1. Choose game mode, Standard or Comander.")
+    print("1. Choose game mode, Standard or Commander.")
     print("2. Define each player names.")
     print("3. Roll a dice to find out who starts.")
 
     player1, player2 = get_players_data()
-
+    print("*********************************")
     print("\nPlayer Data:")
-    print(player1.life_points)
-    print(player2.life_points)
+    print(player1.name, player1.life_points)
+    print(player2.name, player2.life_points)
+    p1score = player1.life_points
+    p2score = player2.life_points
+    new_score = adjust_life()
 
 
 main()
