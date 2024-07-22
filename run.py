@@ -46,12 +46,12 @@ def adjust_life(player1, player2):
         if name.lower() == player1.name.lower():
             player1.adjust_life(new_score)
             if player1.life_points <= 0:
-                print("Player 2 won!")
+                print(f"{player2.name} won!")
                 break
         elif name.lower() == player2.name.lower():
             player2.adjust_life(new_score)
             if player2.life_points <= 0:
-                print("Player 1 won!")
+                print(f"{player1.name} won!")
                 break
         else:
             print(f"No player found with the name {name}.")
