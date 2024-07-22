@@ -37,7 +37,12 @@ def print_ascii_art():
 
 
 def get_players_data():
-
+    """
+    Collect the names of each player and
+    the amount of starting life points 
+    and append it to the Player class.
+    the game mode is the same for both players.
+    """
     def get_initial_life_points():
         while True:
             game_mode = input("Enter game mode (Standard or Commander):\n").lower()
@@ -61,7 +66,7 @@ def get_players_data():
 
     return player1, player2
     
-def adjust_life(player1, player2):
+def calculate_life(player1, player2):
     while True:
         get_new_score = input("\nEnter action (e.g., 'Player1 -3' to subtract 3 life points from Player1 or 'exit' to quit):\n")
         if get_new_score.lower() == "exit":
@@ -122,6 +127,6 @@ def main():
     print("**************************************")
     print()
     roll_dice(player1.name, player2.name)
-    adjust_life(player1, player2)
+    calculate_life(player1, player2)
 
 main()
