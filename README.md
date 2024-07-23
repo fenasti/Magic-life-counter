@@ -4,6 +4,10 @@ As a Magic: The Gathering (from now MTG) player, we all know how difficult it is
 
 Sometimes games can last many plays, where both players can gain and lose life during both turns. When this happens over a long period of time it is difficult to keep track of life points. For this reason Magic Life Counter becomes very useful and a great tool for every MTG player, casual or experienced.
 
+link to the app:
+
+https://mtg-counter-fcc3885f1dd8.herokuapp.com/
+
 <img src="assets/images/welcome.png">
 
 ## Development
@@ -123,4 +127,32 @@ This concept map summarizes in a simple way the process in which the application
 
 <img src="assets/images/validation.png">
 
-## Validation
+## Deployment
+
+link to the Heroku app:
+
+https://mtg-counter-fcc3885f1dd8.herokuapp.com/
+
+- After creting an account in Heroku and linking it with Github is necessary to create a new app in the main menu and give it an unique name.
+
+- In Setting is neccessary to give a key of PORT with value of 8000 to be able to run the code in Herokus app.
+
+- Add the buildpacks of python and nodejs.
+
+- Find the code file in Github and deploys from main.
+
+- This app is connceted for automatic deploys.
+
+## Credit 
+
+- For showing me how to create a dice function:
+https://stackoverflow.com/questions/44008489/dice-rolling-simulator-in-python 
+
+- For giving me the parameters to start the program
+(Let's code a beginner's Python BANK PROGRAM):
+https://www.youtube.com/watch?v=8aW3tkIul-8
+
+- To tomik-z-cech for the PP3-Fallout-Hangman deployed github project for showing me what can be done.
+
+- To https://www.asciiart.eu/ for the skull draw.
+
